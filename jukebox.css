@@ -1,0 +1,26 @@
+body {
+  background-image: url("record.jpg");
+  
+}
+
+#navbar {
+  background-color: #64dbd5;
+  color: #788786;
+  font-size: 20px;
+  padding: 30px;
+  font-family: "Andale Mono", sans-serif;
+  text-align: right;
+}
+
+#soundcloud {
+  color: #788786;
+}
+
+a {
+  color: #5C6F68;
+  margin: 15px;
+}
+
+h1 {
+  color: #40605e;
+}
