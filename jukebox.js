@@ -7,6 +7,8 @@ var pauseButton=document.querySelector("#pause")
 var forwardButton=document.querySelector("#forward")
 var prevButton=document.querySelector("#prev")
 var music=document.querySelector("#music")
+var altPlayButton=document.querySelector("#alt-play")
+var altStopButton=document.querySelector("#alt-stop")
 var i=0
 
 
@@ -22,14 +24,16 @@ function Jukebox() {
   // this.nameList = number;
 }
 
-Jukebox.prototype.addSong = function(track){
+Jukebox.prototype.addSong = function(track,artist,name){
   this.list.push(track);
- // this.nameList.push(name);
+  // this.artistList.push(artist);
+  // this.nameList.push(name);
 }
+
 var jukebox = new Jukebox()
-  jukebox.addSong("pursuit-of-happiness.mp3")
-  jukebox.addSong("drake-started-from-the-bottom.mp3")
-  jukebox.addSong("imagine-dragons-radioactive.mp3")
+  jukebox.addSong("pursuit-of-happiness.mp3", "Kid Cudi feat. Steve Aoki", "Pursuit of Happiness (Remix)")
+  jukebox.addSong("drake-started-from-the-bottom.mp3", "Drake", "Started From The Bottom")
+  jukebox.addSong("imagine-dragons-radioactive.mp3", "Imagine Dragons", "Radioactive")
 
 // defines the Jukebox prototype object
 Jukebox.prototype.play = function(){
@@ -74,8 +78,6 @@ Jukebox.prototype.prev = function(){
   }
 }
 
-
-
 // adds an event listener for when you click the play button
 // preventDefault prevents anchor tag going to next page
 playButton.addEventListener("click", function(event){
@@ -83,24 +85,34 @@ playButton.addEventListener("click", function(event){
   jukebox.play()
 })
 
+altPlayButton.addEventListener("click", function(event){
+  event.preventDefault();
+  jukebox.play()
+})
+
 stopButton.addEventListener("click", function(event){
- event.preventDefault();
- jukebox.stop()
+  event.preventDefault();
+  jukebox.stop()
+})
+
+altStopButton.addEventListener("click", function(event){
+  event.preventDefault();
+  jukebox.stop()
 })
 
 pauseButton.addEventListener("click", function(event){
- event.preventDefault();
- jukebox.pause()
+  event.preventDefault();
+  jukebox.pause()
 })
 
 prevButton.addEventListener("click", function(event){
- event.preventDefault();
- jukebox.prev()
+  event.preventDefault();
+  jukebox.prev()
 })
 
 forwardButton.addEventListener("click", function(event){
- event.preventDefault();
- jukebox.forward()
+  event.preventDefault();
+  jukebox.forward()
 })
 
 
