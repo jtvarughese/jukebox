@@ -12,8 +12,12 @@
     <nav id="navbar">
       <div>
         <i class="fa fa-superpowers" aria-hidden="true"></i>
-        <span>about</span>
-        <span>contact us</span>
+        <span>
+          <a href="about.html" class="nav-links">about</a>
+        </span>
+        <span>
+          <a href="contact.html" class="nav-links">contact us</a>
+        </span>
       </div>
     </nav>
     <!-- audio tag links with js to control music -->
@@ -21,10 +25,14 @@
 
     <div>
       <h1>.soundwave</h1>
+    </div>
     <!-- the form field for user to add song -->
-    <form class="" action="index.html" method="post">
-    </form>
-
+    <div>
+      <form class="formFields" action="index.html" method="post">
+        <input type="text" id="source" placeholder="File source">
+        <input type="text" id="caption" placeholder="Name the artist and/or song title">
+        <a href="#" id="submitButton"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+      </form>
     </div>
     <!-- audio controls -->
     <!-- used fontawesome links -->

@@ -35,6 +35,7 @@ var jukebox = new Jukebox()
   jukebox.addSong("drake-started-from-the-bottom.mp3", "Drake", "Started From The Bottom")
   jukebox.addSong("imagine-dragons-radioactive.mp3", "Imagine Dragons", "Radioactive")
 
+
 // defines the Jukebox prototype object
 Jukebox.prototype.play = function(){
   music.play()
